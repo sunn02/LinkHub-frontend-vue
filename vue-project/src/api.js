@@ -39,7 +39,7 @@ export async function saveNewLink(link) {
   return handleHTTPError(response);
 }
 
-export async function postComment(linkId, comment) {
+export async function commentLink(linkId, comment) {
   const response = await fetch(`${API_URL}/comments/${linkId}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },

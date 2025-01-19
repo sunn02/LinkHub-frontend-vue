@@ -9,7 +9,7 @@
   </template>
   
   <script>
-  import { saveNewLink } from "../services/api";
+  import { saveNewLink } from "../api";
   
   export default {
     name: "LinkForm",
@@ -30,7 +30,7 @@
           tags: this.tags.split(",").map((tag) => tag.trim()),
         };
         await saveNewLink(newLink);
-        this.$emit("saved");
+        this.$router.push("/");
       },
     },
   };

@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <h1>Gestión de Enlaces</h1>
-    <LinksList @view-details="viewDetails" />
-    <LinkDetails v-if="selectedLinkId" :linkId="selectedLinkId" />
+    <router-view></router-view>
   </div>
 </template>
 
