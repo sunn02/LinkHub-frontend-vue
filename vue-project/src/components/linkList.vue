@@ -5,10 +5,10 @@
     
     <div v-if="links.length">
       <div v-for="link in links" :key="link._id" class="link-item">
-        <p><strong>Título:</strong> {{ link.title }}</p>
-        <p><strong>URL:</strong> <a :href="link.url" target="_blank">{{ link.url }}</a></p>
-        <p><strong>Descripción:</strong> {{ link.description }}</p>
-        <p><strong>Etiquetas:</strong> {{ link.tags?.join(", ") || "Sin etiquetas" }}</p>
+        <p><strong> {{ link.title }}</strong></p>
+        <p><a :href="link.url" target="_blank">{{ link.url }}</a></p>
+        <p> {{ link.description }}</p>
+        <p><strong>Tags:</strong> {{ link.tags?.join(", ") || "Sin etiquetas" }}</p>
         
         <router-link :to="`/details/${link._id}`">
           <button>Ver detalles</button>
